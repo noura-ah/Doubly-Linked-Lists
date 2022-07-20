@@ -91,6 +91,9 @@ public class DLL {
     	else if (index == size()) {
     		push(newNode);
     	}
+    	else if (index > size()) {
+    		System.out.println("index out of list range");
+    	}
     	else {
 		    for(int i=0 ;i < index ; i++) {
 		        current = current.next;
@@ -109,6 +112,12 @@ public class DLL {
     		Node newHead = this.head.next;
     		newHead.previous = null;
     		this.head = newHead;
+    	}
+    	else if (index >= size()) {
+    		System.out.println("index out of list range");
+    	}
+    	else if (index == size()-1) {
+    		pop();
     	}
     	else {
 		    for(int i=0 ;i < index; i++) {
